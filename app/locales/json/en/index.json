@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "title": "{{appName}} — AI Long Video Generator | Up to 30s",
+    "description": "Create up to 30-second multi-modal AI videos with Seedance 2.5 on {{appName}}. Combine images, video, audio, and text for controllable, production-ready video generation."
+  },
+  "hero": {
+    "title": "{{appName}} Video Generator",
+    "description": "Combine images, clips, audio, and text in one workspace. {{appName}} keeps characters, motion, and style consistent so you can ship production-ready video faster."
+  }
+}

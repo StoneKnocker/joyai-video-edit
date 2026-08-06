@@ -1,0 +1,58 @@
+name: 🔍 PR Code Validation
+
+concurrency:
+  group: ${{ github.repository }}-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "app/**"
+      - "workers/**"
+      - "*.js"
+      - "*.ts"
+      - "*.tsx"
+      - "package.json"
+      - "pnpm-lock.yaml"
+
+jobs:
+  lint:
+    name: ⬣ Biome lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: biomejs/setup-biome@v2
+      - run: biome ci . --reporter=github
+
+  typecheck:
+    needs: lint
+    name: 🔎 Type check
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v5
+
+      - name: 📦 Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.5
+
+      - name: 🟢 Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: 📎 Install dependencies
+        run: pnpm install
+
+      - name: ⚙️ Prepare Wrangler config
+        run: cp -f wrangler.jsonc.example wrangler.jsonc
+
+      - name: 🔧 Generate Types
+        run: pnpm typegen
+
+      - name: 📝 Run type check
+        run: pnpm typecheck

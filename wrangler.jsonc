@@ -1,0 +1,152 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "vidrush-ai",
+  "main": "./workers/app.ts",
+  "compatibility_date": "2025-04-04",
+  "compatibility_flags": ["nodejs_compat"],
+  // Assets configuration.
+  "assets": {
+    "directory": "./build/client/"
+  },
+  // Recover stuck video tasks when callback/poll miss (see taskRecoveryService)
+  "triggers": {
+    "crons": ["*/2 * * * *"]
+  },
+  // Required secrets — wrangler types generates typings from these names,
+  // wrangler deploy validates they are set on the Worker before uploading.
+  "env": {
+    "dev": {
+      "vars": {
+        "APP_NAME": "VidRush AI",
+        "APP_URL": "http://localhost:3000",
+        "R2_DOMAIN": "https://cdn.vidrushai.com",
+        "ENVIRONMENT": "development",
+        "NEED_MOCK": "0",
+        "GOOGLE_CLIENT_ID": "989337603014-9d98h4bnqq60la9gm6jflohjpt3bbv3n.apps.googleusercontent.com",
+        "SEND_FROM_EMAIL": "support@vidrushai.com",
+        "R2_ACCOUNT_ID": "d6fd0c73bd457f8cf7bacd8f66ac63a4",
+        "R2_ACCESS_KEY_ID": "9ab844348a065605623905aaa51505f9",
+        "R2_BUCKET_NAME": "vidrush-ai",
+        "PAYMENT_PROVIDER": "subotiz",
+        "SUBOTIZ_ENABLED": "true",
+        "CREEM_ENABLED": "false",
+        "PAYPAL_ENABLED": "false",
+        "PAYPAL_ENVIRONMENT": "sandbox",
+        // Fixed ngrok domain so KIE can POST callbacks to local dev
+        "KIE_CALLBACK_BASE_URL": "https://wholehearted-eleanor-nocturnal.ngrok-free.dev"
+      },
+      // KV namespaces configuration.
+      "kv_namespaces": [
+        {
+          "binding": "APP_KV",
+          "id": "514cc3047a144200be5571592d584727",
+          "preview_id": "app_kv_preview_id"
+        }
+      ],
+      // D1 databases configuration.
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "vidrush-ai",
+          "database_id": "0adbbc36-652d-4d21-af78-34667a23fa32",
+          "migrations_dir": "drizzle"
+        }
+      ],
+      // R2 buckets configuration.
+      "r2_buckets": [
+        {
+          "bucket_name": "vidrush-ai",
+          "binding": "R2"
+        }
+      ],
+      "secrets": {
+        "required": [
+          "R2_SECRET_ACCESS_KEY",
+          "BETTER_AUTH_SECRET",
+          "GOOGLE_CLIENT_SECRET",
+          "UNOSEND_API_KEY",
+          "SUBOTIZ_API_KEY",
+          "KIE_API_KEY",
+          "KIE_WEBHOOK_HMAC_KEY",
+          "WAVESPEED_API_KEY"
+        ]
+      }
+    },
+    "prod": {
+      "name": "vidrush-ai",
+      "routes": [
+        { "pattern": "vidrushai.com", "custom_domain": true },
+        { "pattern": "www.vidrushai.com", "custom_domain": true }
+      ],
+      "vars": {
+        "APP_NAME": "VidRush AI",
+        "APP_URL": "https://vidrushai.com",
+        "R2_DOMAIN": "https://cdn.vidrushai.com",
+        "ENVIRONMENT": "production",
+        "NEED_MOCK": "0",
+        "GOOGLE_CLIENT_ID": "989337603014-9d98h4bnqq60la9gm6jflohjpt3bbv3n.apps.googleusercontent.com",
+        "SEND_FROM_EMAIL": "support@vidrushai.com",
+        "R2_ACCOUNT_ID": "d6fd0c73bd457f8cf7bacd8f66ac63a4",
+        "R2_ACCESS_KEY_ID": "9ab844348a065605623905aaa51505f9",
+        "R2_BUCKET_NAME": "vidrush-ai",
+        "PAYMENT_PROVIDER": "subotiz",
+        "SUBOTIZ_ENABLED": "true",
+        "CREEM_ENABLED": "false",
+        "PAYPAL_ENABLED": "false",
+        "PAYPAL_ENVIRONMENT": "production"
+      },
+      // KV namespaces configuration.
+      "kv_namespaces": [
+        {
+          "binding": "APP_KV",
+          "id": "514cc3047a144200be5571592d584727",
+          "preview_id": "app_kv_preview_id"
+        }
+      ],
+      // D1 databases configuration.
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "vidrush-ai",
+          "database_id": "0adbbc36-652d-4d21-af78-34667a23fa32",
+          "migrations_dir": "drizzle"
+        }
+      ],
+      // R2 buckets configuration.
+      "r2_buckets": [
+        {
+          "bucket_name": "vidrush-ai",
+          "binding": "R2"
+        }
+      ],
+      "secrets": {
+        "required": [
+          "R2_SECRET_ACCESS_KEY",
+          "BETTER_AUTH_SECRET",
+          "GOOGLE_CLIENT_SECRET",
+          "UNOSEND_API_KEY",
+          "SUBOTIZ_API_KEY",
+          "KIE_API_KEY",
+          "KIE_WEBHOOK_HMAC_KEY",
+          "WAVESPEED_API_KEY"
+        ]
+      }
+    }
+  },
+  "observability": {
+    // Configures automatic observability settings for telemetry data emitted from your Worker.
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": false,
+      "persist": true,
+      "head_sampling_rate": 1
+    }
+  }
+}

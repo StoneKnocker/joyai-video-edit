@@ -1,0 +1,31 @@
+.DS_Store
+/node_modules/
+
+# React Router
+/.react-router/
+/build/
+
+# Cloudflare
+.mf
+.wrangler
+.dev.vars
+.env.*
+
+# Local agent skill installations
+.agents/
+.claude/
+.trae/
+.windsurf/
+skills-lock.json
+data/
+
+# Content Collections
+.content-collections/
+
+# Localflare generated files
+.localflare/
+.baoyu-skills/
+.worktrees/
+.claude
+docs/design-references/
+docs/research

@@ -1,0 +1,402 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+/* 定制主题变量 */
+@theme {
+  --font-sans:
+    "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-display:
+    "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+
+  /*
+    扩展颜色系统
+    Tailwind v4 会自动将 --color-* 映射为工具类
+    例如: --color-border -> border-border
+  */
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  /* 圆角设置 */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* 自定义动画 (可选，增加高级感) */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+  --animate-slide-up: slide-up 0.4s ease-out;
+  --animate-scale-in: scale-in 0.3s ease-out;
+  --animate-signal-pulse: signal-pulse 2.8s ease-in-out infinite;
+  --animate-slow-drift: slow-drift 18s ease-in-out infinite;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px hsl(160 100% 43% / 0.2);
+    }
+    to {
+      box-shadow: 0 0 40px hsl(160 100% 43% / 0.4);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes signal-pulse {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 2px #00d992);
+      opacity: 0.74;
+    }
+    50% {
+      filter: drop-shadow(0 0 8px #00d992);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slow-drift {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(0, -12px, 0) scale(1.02);
+    }
+  }
+
+  /* Pricing page animations */
+  --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px hsl(160 100% 43% / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(160 100% 43% / 0.5);
+    }
+  }
+}
+
+.landing-theme {
+  --background: 240 17% 2%;
+  --foreground: 0 0% 95%;
+  --card: 0 0% 6%;
+  --card-foreground: 0 0% 95%;
+  --popover: 0 0% 6%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 160 100% 43%;
+  --primary-foreground: 240 17% 2%;
+  --secondary: 20 3% 23%;
+  --secondary-foreground: 0 0% 95%;
+  --muted: 0 0% 6%;
+  --muted-foreground: 23 5% 71%;
+  --accent: 160 100% 43%;
+  --accent-foreground: 240 17% 2%;
+  --border: 20 3% 23%;
+  --input: 20 3% 23%;
+  --ring: 160 100% 43%;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+}
+
+.landing-theme [class*="bg-white"],
+.landing-theme [class*="bg-slate-50"],
+.landing-theme [class*="bg-slate-100"],
+.landing-theme [class*="bg-slate-200"],
+.landing-theme [class*="bg-slate-300"],
+.landing-theme [class*="bg-indigo-50"],
+.landing-theme [class*="bg-indigo-100"],
+.landing-theme [class*="bg-indigo-200"],
+.landing-theme [class*="bg-purple-50"],
+.landing-theme [class*="bg-purple-100"],
+.landing-theme [class*="bg-purple-200"],
+.landing-theme [class*="bg-gradient-to"] {
+  background-color: #101010;
+  background-image: none;
+}
+
+.landing-theme [class*="text-slate-950"],
+.landing-theme [class*="text-slate-900"],
+.landing-theme [class*="text-slate-800"],
+.landing-theme [class*="text-slate-700"] {
+  color: #f2f2f2;
+}
+
+.landing-theme [class*="text-slate-600"],
+.landing-theme [class*="text-slate-500"],
+.landing-theme [class*="text-slate-400"] {
+  color: #b8b3b0;
+}
+
+.landing-theme [class*="text-indigo-"],
+.landing-theme [class*="text-purple-"],
+.landing-theme [class*="text-blue-"] {
+  color: #00d992;
+}
+
+.landing-theme [class*="border-slate"],
+.landing-theme [class*="border-indigo"],
+.landing-theme [class*="border-purple"] {
+  border-color: #3d3a39;
+}
+
+.landing-theme [class*="shadow-indigo"],
+.landing-theme [class*="shadow-slate"] {
+  box-shadow: 0 0 15px rgba(92, 88, 85, 0.16);
+}
+
+/*
+  DESIGN.md 暗黑终端风格主题
+  Abyss Black 底色 + Emerald Signal Green 唯一色彩能量
+*/
+:root {
+  /* 基础背景：Abyss Black (#050507) — 近纯黑，带微弱暖调 */
+  --background: 240 17% 2%;
+
+  /* 主文字：Snow White (#f2f2f2) — 柔和的米白，比纯白更护眼 */
+  --foreground: 0 0% 95%;
+
+  /* 卡片：Carbon Surface (#101010) — 比背景浅一层 */
+  --card: 0 0% 6%;
+  --card-foreground: 0 0% 95%;
+
+  /* 弹出层：与卡片同色 */
+  --popover: 0 0% 6%;
+  --popover-foreground: 0 0% 95%;
+
+  /* 主色调：Emerald Signal Green (#00d992) */
+  --primary: 160 100% 43%;
+  --primary-foreground: 240 17% 2%;
+
+  /* 次要色：Warm Charcoal (#3d3a39) */
+  --secondary: 20 3% 23%;
+  --secondary-foreground: 0 0% 95%;
+
+  /* 静音色：用于背景条纹、未激活状态 */
+  --muted: 0 0% 6%;
+  --muted-foreground: 23 5% 71%;
+
+  /* 强调色：Emerald Signal Green — hover 高亮 */
+  --accent: 160 100% 43%;
+  --accent-foreground: 240 17% 2%;
+
+  /* 破坏性操作 */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+
+  /* 边框和输入框：Warm Charcoal */
+  --border: 20 3% 23%;
+  --input: 20 3% 23%;
+
+  /* Focus Ring：Emerald Signal Green */
+  --ring: 160 100% 43%;
+
+  /* 圆角 */
+  --radius: 0.5rem;
+}
+
+/* 深度暗色模式 — 与 :root 同为暗黑体系，提供更深邃的底色 */
+.dark {
+  --background: 240 17% 2%;
+  --foreground: 0 0% 95%;
+
+  --card: 0 0% 6%;
+  --card-foreground: 0 0% 95%;
+
+  --popover: 0 0% 6%;
+  --popover-foreground: 0 0% 95%;
+
+  --primary: 160 100% 43%;
+  --primary-foreground: 240 17% 2%;
+
+  --secondary: 20 3% 23%;
+  --secondary-foreground: 0 0% 95%;
+
+  --muted: 0 0% 6%;
+  --muted-foreground: 23 5% 71%;
+
+  --accent: 160 100% 43%;
+  --accent-foreground: 240 17% 2%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 95%;
+
+  --border: 20 3% 23%;
+  --input: 20 3% 23%;
+  --ring: 160 100% 43%;
+}
+
+@keyframes sd-scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes sd-scroll-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-sd-scroll-up {
+  animation: sd-scroll-up 35s linear infinite;
+}
+
+.animate-sd-scroll-up-slow {
+  animation: sd-scroll-up 45s linear infinite;
+}
+
+.animate-sd-scroll-down {
+  animation: sd-scroll-down 40s linear infinite;
+}
+
+html {
+  scroll-padding-top: 5rem;
+}
+
+/*
+  基础样式重置
+  确保边框颜色正确应用
+*/
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv11", "ss01";
+    text-rendering: optimizeLegibility;
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "meta": {
+    "title": "{{appName}} Pricing",
+    "description": "Choose the {{appName}} plan that fits your AI video workflow. Subscribe for monthly credits or buy credit packs when you need more Seedance 2.0 generations."
+  },
+  "page": {
+    "unsureSection": {
+      "title": "Not sure which {{appName}} plan fits you?",
+      "description": "Choose Basic if you are just getting started, Standard for regular creators (most popular), Pro for power users, and Max for high-volume production.",
+      "linkText": "Talk to us about the right plan"
+    }
+  },
+  "faq": {
+    "title": "FAQs",
+    "description": "Common questions about credits, plans, billing, and cancellations.",
+    "items": [
+      {
+        "question": "How many credits does it take to generate one video with Seedance 2.0?",
+        "answer": "Credits are charged **per second** of billable duration. The rate depends on output resolution and whether you include **reference video(s)**. Enabling AI audio does **not** change the credit cost.\n\n**Rates (credits per second)**\n\n- **480p** — 19/s without reference video · 11.5/s with reference video\n- **720p** — 41/s without reference video · 25/s with reference video\n- **1080p** — 102/s without reference video · 62/s with reference video\n- **4K** — 208/s without reference video · 128/s with reference video\n\n**How billable seconds are counted**\n\n- **Without reference video** (text-to-video, image-to-video, or multi-reference using only images/audio): rate × output length (4–15 seconds).\n- **With reference video**: rate × (total reference-video length + output length). Reference videos can total up to 15 seconds.\n\n**Examples**\n\n- 5s at 720p, no reference video → 41 × 5 = **205 credits**\n- 5s at 720p with a 3s reference video → 25 × (3 + 5) = **200 credits**\n- 8s at 1080p, no reference video → 102 × 8 = **816 credits**\n\nThe generation form always shows the exact credit cost for your current settings before you create a video."
+      },
+      {
+        "question": "Do unused credits accumulate?",
+        "answer": "Credits from one-time credit packs never expire and can be used anytime. Subscription credits are renewed with each billing cycle, and any unused subscription credits from the previous period are reset when your subscription renews."
+      },
+      {
+        "question": "How do I cancel my subscription?",
+        "answer": "You can cancel your subscription at any time from your account billing settings. If you have any questions or need assistance, please contact our support team."
+      },
+      {
+        "question": "How can I upgrade or change my subscription?",
+        "answer": "Only one subscription can be active at a time. To change plans, cancel your current subscription and start a new plan after it ends (or contact support if you need help switching sooner). You can still buy one-time credit packs anytime while subscribed."
+      },
+      {
+        "question": "How can I purchase more credits?",
+        "answer": "There are two ways to get additional credits:\n\n**One-time Credit Packages**\n\nPurchase our one-time payment packages to get credits instantly. These can be purchased multiple times and work alongside any existing subscription.\n\n**Higher subscription tier**\n\nCancel your current plan when you are ready, then subscribe to a higher-tier plan on this page for a larger monthly credit allocation."
+      },
+      {
+        "question": "What refund policy do you have?",
+        "answer": "Please refer to our [Refund Policy](/refund-policy) for full details. In general, fees for digital services and used credits are non-refundable, except for verified system errors, unused purchases, duplicate charges, or where required by law. Refund requests should be submitted within 7 days of purchase."
+      },
+      {
+        "question": "What does canceling my subscription mean?",
+        "answer": "Canceling your subscription simply means that once your current billing period ends, you will not be charged again and your subscription will not auto-renew. Until that date, you retain full access to all features and can continue using our services as normal."
+      },
+      {
+        "question": "Will I get a refund after canceling my subscription?",
+        "answer": "No, canceling your subscription does not trigger an automatic refund. Subscription cancellation only stops future charges — your subscription will not auto-renew once the current billing period ends. You will still have full access to all features until your billing period expires. If you need a refund, please contact our support team for assistance."
+      },
+      {
+        "question": "Can I still use my credits after canceling my subscription?",
+        "answer": "Yes. After canceling your subscription, you can continue to use all of your subscription credits until the end of your current billing period. Once the subscription period expires, any remaining subscription credits will be reset. However, credits purchased through one-time credit packs never expire and will remain available in your account regardless of your subscription status."
+      },
+      {
+        "question": "How do credit packs work?",
+        "answer": "Credit packs are purchased via a one-time payment, and the credits never expire. You can buy credit packs multiple times — credits stack on top of each other and work alongside any active subscription."
+      },
+      {
+        "question": "Do you support invoices and receipts?",
+        "answer": "Yes. After a successful purchase, a receipt is sent to your registered email address so you can keep a record of the payment."
+      },
+      {
+        "question": "Do you support corporate invoices?",
+        "answer": "If you need a company invoice or additional billing details on your receipt, please contact our support team after purchase and we will help you as much as our payment provider allows."
+      }
+    ]
+  },
+  "subscriptionPlans": [
+    {
+      "id": "basic",
+      "name": "Basic",
+      "description": "Ideal for hobbyists and beginners",
+      "perCredit": "$0.019 / credit",
+      "monthlyCredits": 800,
+      "cycles": {
+        "monthly": {
+          "id": "basic-monthly",
+          "price": 29.9
+        },
+        "yearly": {
+          "id": "basic-yearly",
+          "price": 178.8
+        }
+      },
+      "features": [
+        "800 credits/month",
+        "Seedance 2.0 AI Video",
+        "Multi-modal reference (image, video, audio, text)",
+        "Standard generation speed",
+        "No watermark",
+        "Private generation",
+        "Customer support",
+        "Commercial Use License"
+      ],
+      "cta": "Subscribe",
+      "popular": false
+    },
+    {
+      "id": "standard",
+      "name": "Standard",
+      "description": "Perfect for most creators",
+      "perCredit": "$0.016 / credit",
+      "monthlyCredits": 1600,
+      "cycles": {
+        "monthly": {
+          "id": "standard-monthly",
+          "price": 49.9
+        },
+        "yearly": {
+          "id": "standard-yearly",
+          "price": 298.8
+        }
+      },
+      "features": [
+        "1600 credits/month",
+        "Seedance 2.0 AI Video",
+        "Multi-modal reference (image, video, audio, text)",
+        "Priority generation",
+        "No watermark",
+        "Private generation",
+        "Priority customer support",
+        "Commercial Use License"
+      ],
+      "cta": "Subscribe",
+      "popular": true
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "description": "Ideal for power users",
+      "perCredit": "$0.012 / credit",
+      "monthlyCredits": 4000,
+      "cycles": {
+        "monthly": {
+          "id": "pro-monthly",
+          "price": 99.9
+        },
+        "yearly": {
+          "id": "pro-yearly",
+          "price": 598.8
+        }
+      },
+      "features": [
+        "4000 credits/month",
+        "Seedance 2.0 AI Video",
+        "Multi-modal reference (image, video, audio, text)",
+        "Fastest generation speed",
+        "No watermark",
+        "Private generation",
+        "Expert team support",
+        "Commercial Use License"
+      ],
+      "cta": "Subscribe",
+      "popular": false
+    },
+    {
+      "id": "max",
+      "name": "Max",
+      "description": "Perfect for high-usage users",
+      "perCredit": "$0.010 / credit",
+      "monthlyCredits": 10000,
+      "cycles": {
+        "monthly": {
+          "id": "max-monthly",
+          "price": 199.9
+        },
+        "yearly": {
+          "id": "max-yearly",
+          "price": 1198.8
+        }
+      },
+      "features": [
+        "10000 credits/month",
+        "Seedance 2.0 AI Video",
+        "Multi-modal reference (image, video, audio, text)",
+        "Fastest generation speed",
+        "No watermark",
+        "Private generation",
+        "Expert team support",
+        "Commercial Use License"
+      ],
+      "cta": "Subscribe",
+      "popular": false
+    }
+  ],
+  "creditPacks": [
+    {
+      "id": "pack-starter",
+      "name": "Starter Pack",
+      "description": "Great for occasional use",
+      "credits": 1000,
+      "price": 39.9,
+      "perCredit": "$0.040 / credit",
+      "cta": "One-Time Payment"
+    },
+    {
+      "id": "pack-creator",
+      "name": "Creator Pack",
+      "description": "Perfect for most creators",
+      "credits": 3000,
+      "price": 89.9,
+      "perCredit": "$0.030 / credit",
+      "cta": "One-Time Payment"
+    },
+    {
+      "id": "pack-professional",
+      "name": "Professional Pack",
+      "description": "Ideal for power users",
+      "credits": 8000,
+      "price": 199.9,
+      "perCredit": "$0.025 / credit",
+      "cta": "One-Time Payment"
+    },
+    {
+      "id": "pack-advanced",
+      "name": "Advanced Pack",
+      "description": "Best for high-volume usage",
+      "credits": 30000,
+      "price": 599.9,
+      "perCredit": "$0.020 / credit",
+      "cta": "One-Time Payment"
+    },
+    {
+      "id": "pack-ultra",
+      "name": "Ultra Pack",
+      "description": "Best for high-volume usage",
+      "credits": 100000,
+      "price": 1899.9,
+      "perCredit": "$0.019 / credit",
+      "cta": "One-Time Payment"
+    },
+    {
+      "id": "pack-max",
+      "name": "Max Pack",
+      "description": "Best for high-volume usage",
+      "credits": 200000,
+      "price": 3599.9,
+      "perCredit": "$0.018 / credit",
+      "cta": "One-Time Payment"
+    }
+  ]
+}

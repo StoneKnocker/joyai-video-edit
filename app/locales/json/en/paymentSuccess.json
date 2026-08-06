@@ -1,0 +1,45 @@
+{
+  "loading": {
+    "eyebrow": "Confirming order",
+    "title": "We are syncing your payment",
+    "description": "Your checkout is complete. We are waiting for the payment provider to confirm the order and update your account.",
+    "note": "This usually takes a few seconds. You can keep this page open or check your balance in another tab.",
+    "secondaryAction": "View credits"
+  },
+  "success": {
+    "eyebrow": "Payment received",
+    "title": "Your purchase is ready",
+    "creditsDescription": "{{count}} credits have been added to your account.",
+    "subscriptionDescription": "Your subscription is active and the credits for this cycle are now available.",
+    "primaryAction": "Start creating",
+    "secondaryAction": "View credits"
+  },
+  "timeout": {
+    "eyebrow": "Still processing",
+    "title": "The provider is still confirming this order",
+    "description": "We have not received the final confirmation yet. Your payment may still complete normally, so check your balance first or refresh in a moment.",
+    "primaryAction": "View credits",
+    "secondaryAction": "Refresh status"
+  },
+  "error": {
+    "eyebrow": "Status unavailable",
+    "title": "We could not confirm this payment",
+    "description": "There was a problem checking the payment result.",
+    "canceledDescription": "This checkout was canceled before the payment completed.",
+    "notFoundDescription": "We could not find a matching local order for this return URL.",
+    "missingReference": "Missing payment reference. Please try again from the pricing page.",
+    "refreshPage": "Refresh status",
+    "returnToPlans": "View Pricing Plans"
+  },
+  "summary": {
+    "eyebrow": "Order details",
+    "title": "Summary",
+    "reference": "Reference",
+    "provider": "Provider",
+    "plan": "Plan",
+    "amount": "Amount",
+    "credits": "Credits",
+    "pendingValue": "Updating",
+    "unavailable": "Unavailable"
+  }
+}

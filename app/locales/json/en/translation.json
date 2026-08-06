@@ -1,0 +1,213 @@
+{
+  "terms": "Terms of Service",
+  "privacyLabel": "Privacy Policy",
+  "cookieLabel": "Cookie Policy",
+  "refundLabel": "Refund Policy",
+  "navigation": {
+    "home": "Home"
+  },
+  "privacy": {
+    "contentNotFound": "Content Not Found",
+    "contentUnavailable": "Privacy policy content is unavailable",
+    "lastModified": "Last modified: "
+  },
+  "termsPage": {
+    "contentNotFound": "Content Not Found",
+    "contentUnavailable": "Terms and conditions content is unavailable",
+    "lastModified": "Last modified: "
+  },
+  "cookiePage": {
+    "contentNotFound": "Content Not Found",
+    "contentUnavailable": "Cookie policy content is unavailable",
+    "lastModified": "Last modified: "
+  },
+  "refundPage": {
+    "contentNotFound": "Content Not Found",
+    "contentUnavailable": "Refund policy content is unavailable",
+    "lastModified": "Last modified: "
+  },
+  "header": {
+    "studio": "AI Video Studio",
+    "showcase": "Showcase",
+    "guide": "Guide",
+    "pricing": "Pricing",
+    "startGenerating": "Start Now",
+    "signIn": "Sign in",
+    "closeMobileMenu": "Close navigation menu",
+    "openMobileMenu": "Open navigation menu",
+    "loadingAccount": "Loading account"
+  },
+  "userNav": {
+    "myCreations": "My Creations",
+    "myCredits": "My Credits",
+    "adminPanel": "Admin Panel",
+    "signingOut": "Signing out...",
+    "logOut": "Log out",
+    "accountMenu": "Open account menu",
+    "viewCredits": "View credits",
+    "signOutFailed": "Sign out failed. Please try again.",
+    "account": "Account"
+  },
+  "footer": {
+    "brandDescription": "{{appName}} — multi-modal AI video creation from images, video, audio, and text.",
+    "service": "Service",
+    "resources": "Resources",
+    "contact": "Contact",
+    "community": "Community",
+    "legal": "Legal",
+    "multiReference": "Multi Reference",
+    "imageToVideo": "Image to Video",
+    "textToVideo": "Text to Video",
+    "allRightsReserved": "All rights reserved.",
+    "language": "Language",
+    "poweredBy": "{{appName}} powered by Seedance"
+  },
+  "feedback": {
+    "eyebrow": "Feedback",
+    "title": "Tell us what would make this better",
+    "description": "Share bugs, questions, ideas, or anything that got in your way while using the product.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "categoryLabel": "Feedback type",
+    "messageLabel": "Your feedback",
+    "messagePlaceholder": "Tell us what happened, what you expected, or what you would like to see next.",
+    "messageHint": "Please include enough detail for us to understand the request.",
+    "submit": "Submit feedback",
+    "submitting": "Submitting...",
+    "success": "Thanks for the feedback. We received your message.",
+    "error": "Feedback could not be submitted. Please try again.",
+    "categories": {
+      "bug": "Bug report",
+      "idea": "Feature idea",
+      "question": "Question",
+      "other": "Other"
+    }
+  },
+  "blog": {
+    "title": "The {{appName}} Blog",
+    "description": "The {{appName}} Blog",
+    "articleEyebrow": "Article",
+    "backToList": "Back to blog",
+    "readMore": "Read article",
+    "emptyTitle": "No articles yet",
+    "emptyDescription": "Check back soon for tips on AI image generation, prompt engineering, and workflow guides."
+  },
+  "auth": {
+    "email": "Email",
+    "verifyYourEmail": "Verify your email",
+    "signInToYourAccount": "Sign in to your account",
+    "enterEmailToSignIn": "Sign in or create an account to continue",
+    "verificationCodeSentTo": "We've sent a verification code to",
+    "sendVerificationCode": "Send Verification Code",
+    "sendingCode": "Sending Code...",
+    "orContinueWithEmail": "Or continue with email",
+    "continueWithGoogle": "Continue with Google",
+    "verificationCode": "Verification Code",
+    "enterSixDigitCode": "Enter 6-digit code",
+    "verifying": "Verifying...",
+    "verifyAndSignIn": "Verify & Sign In",
+    "backToEmail": "Back to Email",
+    "completeSignInInPopup": "Complete sign-in in the popup window…",
+    "waitingForGoogle": "Waiting for Google…",
+    "agreement": "By signing in, you agree to our <terms>Terms of Service</terms> and <privacy>Privacy Policy</privacy>.",
+    "toast": {
+      "signedIn": "Successfully signed in!"
+    },
+    "errors": {
+      "sendOtpFailed": "Failed to send OTP. Please try again.",
+      "invalidOtp": "Invalid OTP. Please try again.",
+      "googleLoginFailed": "Google login failed. Please try again.",
+      "popupBlocked": "Pop-up was blocked. Please allow pop-ups for this site and try again."
+    }
+  },
+  "errorBoundary": {
+    "backToHome": "Back to home",
+    "applicationErrorTitle": "Oops! Application Error.",
+    "unexpectedError": "An unexpected error occurred.",
+    "notFoundTitle": "404 Not Found",
+    "genericTitle": "Error",
+    "notFoundDetail": "The requested page could not be found."
+  },
+  "authError": {
+    "title": "{{appName}} Authentication Error",
+    "defaultDescription": "We couldn't sign you in. Please try again or contact support if the problem persists.",
+    "goToSignIn": "Go to sign in",
+    "takeMeHome": "Take me home",
+    "errorCode": "Error code:"
+  },
+  "notFoundPage": {
+    "metaTitle": "Not Found",
+    "title": "{{appName}} Page Not Found",
+    "description": "The page you requested doesn't exist or has been moved. Try going back to the homepage or check the URL."
+  },
+  "pricing": {
+    "processing": "Processing...",
+    "genericError": "An error occurred. Please try again.",
+    "alreadySubscribed": "You already have an active subscription. Cancel it or wait until it ends before starting a new plan. Credit packs can still be purchased anytime.",
+    "currentPlan": "Current Plan",
+    "subscribed": "Subscribed",
+    "manageSubscription": "Manage on Credits page",
+    "activePlanBanner": "You're on {{plan}}. Only one subscription at a time — buy credit packs anytime for extra credits."
+  },
+  "creations": {
+    "title": "Your {{appName}} Creations",
+    "description": "Browse your generated videos, prompts, and reference materials.",
+    "emptyTitle": "No creations yet",
+    "emptyDescription": "Your generated videos will appear here. Start by creating your first video from the homepage workspace.",
+    "viewVideo": "View video",
+    "downloadVideo": "Download",
+    "detailsTitle": "Generation details",
+    "noPrompt": "No prompt",
+    "resolution": "Resolution",
+    "duration": "Duration",
+    "aspectRatio": "Aspect ratio",
+    "audio": "Audio",
+    "audioOn": "With audio",
+    "audioOff": "Silent",
+    "created": "Created",
+    "references": "References"
+  },
+  "credits": {
+    "title": "Your {{appName}} Credits",
+    "description": "View your credit balance, subscription credits, and generation usage history.",
+    "subscriptionCredits": "Subscription Credits",
+    "subscriptionCreditsHint": "Renews with your subscription cycle",
+    "permanentCredits": "Permanent Credits",
+    "neverExpires": "Never expires",
+    "totalAvailable": "Total Available:",
+    "transactionHistory": "Transaction History",
+    "noTransactionsYet": "No transactions yet",
+    "date": "Date",
+    "amount": "Amount",
+    "type": "Type",
+    "event": "Event",
+    "tableDescription": "Description",
+    "events": {
+      "welcomeBonus": "Welcome Bonus",
+      "usage": "Usage",
+      "refund": "Refund",
+      "purchase": "Purchase",
+      "subscription": "Subscription",
+      "reset": "Reset",
+      "checkIn": "Check-in",
+      "adjustment": "Adjustment"
+    },
+    "types": {
+      "permanent": "Permanent",
+      "subscription": "Subscription"
+    },
+    "subscription": {
+      "title": "Current Plan",
+      "renewsOn": "Renews on {{date}}",
+      "endsOn": "Access until {{date}} (will not renew)",
+      "cancel": "Cancel subscription",
+      "canceling": "Canceling...",
+      "cancelHint": "You keep access and subscription credits until the end of the billing period.",
+      "cancelConfirm": "Cancel auto-renewal? You can keep using your plan and credits until {{date}}. No further charges after that.",
+      "cancelSuccess": "Subscription canceled. Access continues until {{date}}.",
+      "cancelFailed": "Could not cancel subscription. Please try again or contact support.",
+      "cancelScheduledHint": "Cancellation is scheduled. You keep full access until {{date}}.",
+      "contactSupportToCancel": "This subscription cannot be canceled in-app. Please contact support."
+    }
+  }
+}
