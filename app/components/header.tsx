@@ -58,20 +58,11 @@ const Header: React.FC = () => {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between text-foreground">
-          {/* Left: Logo & Site Name */}
+          {/* Left: Site Name */}
           <AppLogo />
 
           {/* Center: Desktop Navigation */}
           <nav className="hidden items-center gap-6 md:flex">
-            <Link to="/#workspace" className={desktopNavLinkClass}>
-              {t("header.studio")}
-            </Link>
-            <Link to="/showcase" className={desktopNavLinkClass}>
-              {t("header.showcase")}
-            </Link>
-            <Link to="/guide" className={desktopNavLinkClass}>
-              {t("header.guide")}
-            </Link>
             <Link to="/pricing" className={desktopNavLinkClass}>
               {t("header.pricing")}
             </Link>
@@ -104,13 +95,6 @@ const Header: React.FC = () => {
                 >
                   <Link to="/sign-in">{t("header.signIn")}</Link>
                 </Button>
-                <Button
-                  size="sm"
-                  asChild
-                  className="rounded-md border border-primary/60 bg-card font-semibold text-primary shadow-[0_0_20px_rgba(0,217,146,0.12)] hover:bg-black/20 hover:text-primary"
-                >
-                  <Link to="/#workspace">{t("header.startGenerating")}</Link>
-                </Button>
               </div>
             )}
             <Button
@@ -134,27 +118,6 @@ const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="slide-in-from-top-5 absolute top-16 right-0 left-0 flex animate-in flex-col gap-4 border-b bg-background p-4 shadow-[0_20px_60px_rgba(0,0,0,0.7)] duration-200 md:hidden">
           <Link
-            to="/#workspace"
-            className={mobileNavLinkClass}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            {t("header.studio")}
-          </Link>
-          <Link
-            to="/showcase"
-            className={mobileNavLinkClass}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            {t("header.showcase")}
-          </Link>
-          <Link
-            to="/guide"
-            className={mobileNavLinkClass}
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            {t("header.guide")}
-          </Link>
-          <Link
             to="/pricing"
             className={mobileNavLinkClass}
             onClick={() => setIsMobileMenuOpen(false)}
@@ -171,17 +134,6 @@ const Header: React.FC = () => {
               >
                 <Link to="/sign-in" onClick={() => setIsMobileMenuOpen(false)}>
                   {t("header.signIn")}
-                </Link>
-              </Button>
-              <Button
-                asChild
-                className="rounded-md border border-primary/60 bg-card font-semibold text-primary hover:bg-black/20 hover:text-primary"
-              >
-                <Link
-                  to="/#workspace"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {t("header.startGenerating")}
                 </Link>
               </Button>
             </div>

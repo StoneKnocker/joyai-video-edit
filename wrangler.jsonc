@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "vidrush-ai",
+  "name": "joyai-video-edit",
   "main": "./workers/app.ts",
   "compatibility_date": "2025-04-04",
   "compatibility_flags": ["nodejs_compat"],
@@ -17,16 +17,16 @@
   "env": {
     "dev": {
       "vars": {
-        "APP_NAME": "VidRush AI",
+        "APP_NAME": "JoyAI Video Edit",
         "APP_URL": "http://localhost:3000",
-        "R2_DOMAIN": "https://cdn.vidrushai.com",
+        "R2_DOMAIN": "https://cdn.joyaivideoedit.com",
         "ENVIRONMENT": "development",
         "NEED_MOCK": "0",
         "GOOGLE_CLIENT_ID": "989337603014-9d98h4bnqq60la9gm6jflohjpt3bbv3n.apps.googleusercontent.com",
-        "SEND_FROM_EMAIL": "support@vidrushai.com",
+        "SEND_FROM_EMAIL": "support@joyaivideoedit.com",
         "R2_ACCOUNT_ID": "d6fd0c73bd457f8cf7bacd8f66ac63a4",
         "R2_ACCESS_KEY_ID": "9ab844348a065605623905aaa51505f9",
-        "R2_BUCKET_NAME": "vidrush-ai",
+        "R2_BUCKET_NAME": "joyai-video-edit",
         "PAYMENT_PROVIDER": "subotiz",
         "SUBOTIZ_ENABLED": "true",
         "CREEM_ENABLED": "false",
@@ -47,15 +47,15 @@
       "d1_databases": [
         {
           "binding": "DB",
-          "database_name": "vidrush-ai",
-          "database_id": "0adbbc36-652d-4d21-af78-34667a23fa32",
+          "database_name": "joyai-video-edit",
+          "database_id": "ef98c50b-3ce2-49e0-b7a3-083395b4688a",
           "migrations_dir": "drizzle"
         }
       ],
       // R2 buckets configuration.
       "r2_buckets": [
         {
-          "bucket_name": "vidrush-ai",
+          "bucket_name": "joyai-video-edit",
           "binding": "R2"
         }
       ],
@@ -73,22 +73,21 @@
       }
     },
     "prod": {
-      "name": "vidrush-ai",
+      "name": "joyai-video-edit",
       "routes": [
-        { "pattern": "vidrushai.com", "custom_domain": true },
-        { "pattern": "www.vidrushai.com", "custom_domain": true }
+        { "pattern": "joyaivideoedit.com", "custom_domain": true }
       ],
       "vars": {
-        "APP_NAME": "VidRush AI",
-        "APP_URL": "https://vidrushai.com",
-        "R2_DOMAIN": "https://cdn.vidrushai.com",
+        "APP_NAME": "JoyAI Video Edit",
+        "APP_URL": "https://joyaivideoedit.com",
+        "R2_DOMAIN": "https://cdn.joyaivideoedit.com",
         "ENVIRONMENT": "production",
         "NEED_MOCK": "0",
         "GOOGLE_CLIENT_ID": "989337603014-9d98h4bnqq60la9gm6jflohjpt3bbv3n.apps.googleusercontent.com",
-        "SEND_FROM_EMAIL": "support@vidrushai.com",
+        "SEND_FROM_EMAIL": "support@joyaivideoedit.com",
         "R2_ACCOUNT_ID": "d6fd0c73bd457f8cf7bacd8f66ac63a4",
         "R2_ACCESS_KEY_ID": "9ab844348a065605623905aaa51505f9",
-        "R2_BUCKET_NAME": "vidrush-ai",
+        "R2_BUCKET_NAME": "joyai-video-edit",
         "PAYMENT_PROVIDER": "subotiz",
         "SUBOTIZ_ENABLED": "true",
         "CREEM_ENABLED": "false",
@@ -107,15 +106,15 @@
       "d1_databases": [
         {
           "binding": "DB",
-          "database_name": "vidrush-ai",
-          "database_id": "0adbbc36-652d-4d21-af78-34667a23fa32",
+          "database_name": "joyai-video-edit",
+          "database_id": "ef98c50b-3ce2-49e0-b7a3-083395b4688a",
           "migrations_dir": "drizzle"
         }
       ],
       // R2 buckets configuration.
       "r2_buckets": [
         {
-          "bucket_name": "vidrush-ai",
+          "bucket_name": "joyai-video-edit",
           "binding": "R2"
         }
       ],

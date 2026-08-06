@@ -159,15 +159,6 @@ export default function Footer() {
   const localizedTarget = `${normalizedPathname}${location.search}${location.hash}`;
   const navGroups: FooterNavGroup[] = [
     {
-      title: t("footer.service"),
-      links: [
-        { label: t("header.showcase"), to: "/showcase" },
-        { label: t("footer.multiReference"), to: "/#workspace" },
-        { label: t("footer.imageToVideo"), to: "/#workspace" },
-        { label: t("footer.textToVideo"), to: "/#workspace" },
-      ],
-    },
-    {
       title: t("footer.resources"),
       links: [
         { label: t("header.pricing"), to: "/pricing" },
@@ -201,7 +192,7 @@ export default function Footer() {
           </div>
 
           <div className="relative flex flex-1 flex-col lg:max-w-3xl">
-            <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8 lg:gap-14">
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8 lg:gap-14">
               {navGroups.map((group) => (
                 <div key={group.title} className="flex flex-col gap-5">
                   <p className="font-semibold text-muted-foreground text-[0.8rem] uppercase tracking-[0.22em]">

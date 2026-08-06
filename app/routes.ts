@@ -17,8 +17,6 @@ export default [
         route("blog", "routes/pages/blog.tsx"),
         route("blog/:slug", "routes/pages/blog-post.tsx"),
         route("feedback", "routes/pages/feedback.tsx"),
-        route("showcase", "routes/pages/showcase.tsx"),
-        route("guide", "routes/pages/guide.tsx"),
         ...(import.meta.env.DEV ? [route("_test", "routes/_test.tsx")] : []),
         ...prefix("user", [
           layout("routes/pages/user/layout.tsx", [
