@@ -1,58 +1,30 @@
 ---
 title: "Refund Policy"
 lang: "en"
-lastModified: "2026-08-01T00:00:00.000Z"
+lastModified: "2026-08-06T00:00:00.000Z"
 ---
 
 # Refund Policy
 
-**Effective Date:** August 1, 2026
+**Effective Date:** August 6, 2026
 
-At {{appName}}, we are committed to providing an exceptional AI video creation experience. We understand that your needs may change, and you might occasionally need to request a refund. Please review this refund policy carefully before completing your purchase.
+## Current offering
 
-## Return & Refund Policy
+{{appName}} currently operates as a **free waiting-list and marketing website**. Joining the waiting list does **not** require payment. There are **no paid plans, credits, or subscriptions** for sale as the primary product on this Site at this time.
 
-Thank you for using our services. Please read the following refund policy carefully before making a purchase.
+## No purchase — no refunds
 
-### Digital Products & Services
+Because waitlist signup does not charge you:
 
-Our website provides digital services and virtual products, including but not limited to AI-generated videos, subscriptions, and virtual credits. As no physical goods are shipped, returns of physical products are not applicable.
+- There are **no refunds** to issue for waitlist registration itself
+- If you submitted an email by mistake, contact us to request removal from the list (see Privacy Policy)
 
-### Refund Eligibility
+## Future paid products
 
-Refunds may be granted under the following conditions:
+If we later introduce paid features (for example, hosted video editing, subscriptions, or credit packs), we will publish an updated refund policy **before or at** the time those paid features launch. Any payment terms, trial periods, or refund windows will be described there and at checkout.
 
-- The service was not delivered successfully due to a verified system error on our side
-- The purchased subscription or credits were not activated or used
-- Duplicate charges caused by a payment system error
-- Refund requests must be submitted within **7 days** of the original purchase date
+Until then, any pricing pages or payment-related UI that remain reachable by direct URL are not an invitation to purchase a live product and should not be treated as an active commercial offer.
 
-### Non-Refundable Situations
+## Contact
 
-Refunds will not be issued in the following cases:
-
-- The digital content or service has already been successfully delivered and used (for example, credits have been consumed to generate videos)
-- Dissatisfaction based on personal preference or creative results of AI-generated content
-- Failure to use the service due to user device, network, or incorrect operation
-- Violation of our Terms of Service or content policies
-- Canceling a subscription only stops future renewals; it does **not** automatically refund fees already paid for the current billing period
-
-### Credits and Failed Generations
-
-If a video generation task fails due to a verified platform or provider error after credits were deducted, we will typically restore the corresponding credits to your account automatically. Credit restoration is not the same as a monetary refund.
-
-### How to Request a Refund
-
-To request a refund, please contact our support team at {{supportEmail}} and provide:
-
-- Order ID or payment receipt details
-- Registered email address
-- Reason for the refund request
-
-Approved refunds will be processed back to the original payment method within **5–10 business days**, depending on the payment provider.
-
-### Changes to This Policy
-
-We reserve the right to update our refund policy at any time. Any changes will be reflected on this page, and we encourage you to review it periodically.
-
-This Refund Policy should be read together with our [Terms & Conditions](/terms-and-conditions). Where applicable law requires a different outcome, that law will prevail.
+For waitlist removal or billing questions about a future purchase (if any), use the support contact published on the Site.

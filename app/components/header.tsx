@@ -6,15 +6,7 @@ import { useLocation } from "react-router";
 import { Link } from "@/components/i18n-link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { useAuth } from "~/hooks/use-auth";
 import { AppLogo } from "./app-logo";
-import { UserNav } from "./user-nav";
-
-const desktopNavLinkClass = cn(
-  "rounded-md px-3 py-2 font-medium text-muted-foreground text-sm transition-colors",
-  "hover:bg-card hover:text-primary",
-  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50",
-);
 
 const mobileNavLinkClass = cn(
   "rounded-md px-4 py-3 text-left font-medium text-muted-foreground transition-colors",
@@ -25,11 +17,9 @@ const mobileNavLinkClass = cn(
 const Header: React.FC = () => {
   const { t } = useTranslation();
   const location = useLocation();
-  const { isAuthenticated, isLoading } = useAuth();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Handle scroll effect for sticky header
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -38,15 +28,10 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Header lives in a persistent layout; close overlay on any client navigation
-  // (including UserNav links that do not call setIsMobileMenuOpen).
   // biome-ignore lint/correctness/useExhaustiveDependencies: re-run on route change only
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location.pathname, location.search, location.hash]);
-
-  const showGuestCta = !isLoading && !isAuthenticated;
-  const showUserNav = !isLoading && isAuthenticated;
 
   return (
     <header
@@ -58,45 +43,16 @@ const Header: React.FC = () => {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between text-foreground">
-          {/* Left: Site Name */}
           <AppLogo />
 
-          {/* Center: Desktop Navigation */}
-          <nav className="hidden items-center gap-6 md:flex">
-            <Link to="/pricing" className={desktopNavLinkClass}>
-              {t("header.pricing")}
-            </Link>
-          </nav>
-
-          {/* Right: auth actions + mobile menu button */}
-          <div
-            className="flex items-center gap-2 md:gap-4"
-            aria-busy={isLoading}
-          >
-            {isLoading && (
-              <>
-                <span className="sr-only">
-                  {t("header.loadingAccount", "Loading account")}
-                </span>
-                <div className="flex items-center gap-2" aria-hidden>
-                  <div className="h-8 min-w-[4.5rem] animate-pulse rounded-md border bg-card" />
-                  <div className="size-9 animate-pulse rounded-md border bg-card" />
-                </div>
-              </>
-            )}
-            {showUserNav && <UserNav />}
-            {showGuestCta && (
-              <div className="hidden items-center gap-1 md:flex">
-                <Button
-                  size="sm"
-                  variant="ghost"
-                  asChild
-                  className="rounded-md text-muted-foreground hover:bg-card hover:text-primary"
-                >
-                  <Link to="/sign-in">{t("header.signIn")}</Link>
-                </Button>
-              </div>
-            )}
+          <div className="flex items-center gap-2 md:gap-4">
+            <Button
+              size="sm"
+              asChild
+              className="hidden rounded-md border border-primary/60 bg-card font-semibold text-primary shadow-[0_0_20px_rgba(0,217,146,0.12)] hover:bg-black/20 hover:text-primary md:inline-flex"
+            >
+              <Link to="/#waitlist">Join Waiting List</Link>
+            </Button>
             <Button
               variant="ghost"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -114,30 +70,15 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div className="slide-in-from-top-5 absolute top-16 right-0 left-0 flex animate-in flex-col gap-4 border-b bg-background p-4 shadow-[0_20px_60px_rgba(0,0,0,0.7)] duration-200 md:hidden">
           <Link
-            to="/pricing"
+            to="/#waitlist"
             className={mobileNavLinkClass}
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            {t("header.pricing")}
+            Join Waiting List
           </Link>
-
-          {showGuestCta && (
-            <div className="mt-4 flex flex-col gap-3 border-t pt-4">
-              <Button
-                variant="ghost"
-                asChild
-                className="rounded-md text-muted-foreground hover:bg-card hover:text-primary"
-              >
-                <Link to="/sign-in" onClick={() => setIsMobileMenuOpen(false)}>
-                  {t("header.signIn")}
-                </Link>
-              </Button>
-            </div>
-          )}
         </div>
       )}
     </header>

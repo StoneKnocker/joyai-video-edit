@@ -1,4 +1,5 @@
 深度调研 刚刚发布的 joyai video edit 的信息，然后给 joyai video edit 制作一个网站, 调研过程中记录一些图片和视频资源.
 - 首页是一个落地页， 必须包含几张图片和视频丰富页面内容, 图片要从深度调研的来源中挑选. 图片要压缩到100kb以下，并上传到r2后使用。
 - 实现 join waiting list 的功能，收集感兴趣人的邮箱
-- privacy, terms, cookie 政策的内容对应的做调整
+- header 和 footer隐藏 pricing 入口， 隐藏 refund policy 入口， header 放一个 join waiting list 的按钮
+- privacy, terms, cookie, reufnd 政策的内容对应的做调整

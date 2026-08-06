@@ -161,7 +161,7 @@ export default function Footer() {
     {
       title: t("footer.resources"),
       links: [
-        { label: t("header.pricing"), to: "/pricing" },
+        { label: "Join Waiting List", to: "/#waitlist" },
         { label: t("footer.contact"), href: `mailto:${supportEmail}` },
       ],
     },
@@ -171,7 +171,6 @@ export default function Footer() {
         { label: t("privacyLabel"), to: "/privacy-policy" },
         { label: t("cookieLabel"), to: "/cookie-policy" },
         { label: t("terms"), to: "/terms-and-conditions" },
-        { label: t("refundLabel"), to: "/refund-policy" },
       ],
     },
   ];
@@ -186,7 +185,8 @@ export default function Footer() {
             <div>
               <AppLogo />
               <p className="mt-5 max-w-xs text-pretty text-muted-foreground text-sm leading-6">
-                {t("footer.brandDescription", { appName })}
+                {appName} — real-time, instruction-guided open-ended video
+                editing. Join the waiting list for early access updates.
               </p>
             </div>
           </div>
@@ -332,7 +332,7 @@ export default function Footer() {
               </>
             ) : null}
             <p className="text-muted-foreground text-sm">
-              {t("footer.poweredBy")}
+              Research-inspired waitlist for JoyAI Video Edit
             </p>
             <div className="flex flex-col gap-1 text-left lg:text-right">
               <p className="text-balance text-muted-foreground">

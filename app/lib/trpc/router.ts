@@ -4,6 +4,7 @@ import { paymentRouter } from "./paymentRouter";
 import { r2Router } from "./r2Router";
 import { userRouter } from "./userRouter";
 import { videoRouter } from "./videoRouter";
+import { waitlistRouter } from "./waitlistRouter";
 
 export const appRouter = router({
   user: userRouter,
@@ -11,6 +12,7 @@ export const appRouter = router({
   payment: paymentRouter,
   r2: r2Router,
   video: videoRouter,
+  waitlist: waitlistRouter,
 });
 
 // export type definition of API

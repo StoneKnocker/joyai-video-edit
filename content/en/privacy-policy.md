@@ -1,112 +1,87 @@
 ---
 title: "Privacy Policy"
 lang: "en"
-lastModified: "2026-05-27T00:00:00.000Z"
+lastModified: "2026-08-06T00:00:00.000Z"
 ---
 
 # Privacy Policy
 
-**Effective Date:** May 27, 2026
+**Effective Date:** August 6, 2026
 
-This Privacy Policy describes how {{appName}} collects and uses the information, which may include Personal Data, you provide on our website (referred to as the 'Site' or 'Services'). We act in our customers' interest and are transparent about the processing of any Personal Data.
+This Privacy Policy describes how {{appName}} (“we”, “us”) collects and uses information when you visit our website (the “Site”). At this time, the Site is a **waitlist and marketing page** for a planned product experience based on JoyAI Video Edit research. We do **not** currently offer a live paid AI video generation product, account-based generation, or credit purchases on this Site.
 
-"Personal Data" refers to any information relating to an identifiable individual or their personal identity.
+“Personal Data” means information that identifies or can reasonably identify an individual.
 
-## DATA COLLECTION
+## Data we collect
 
-To grant you access and to use our Services, {{appName}} requests you to provide the following information, some of which may be Personal Data:
+### Waitlist and contact
 
-### Core Service Data (AI Video Generation)
+- **Email address:** When you join the waiting list or contact us, we collect the email address you submit so we can notify you about product availability, early access, and related updates.
+- **Messages you send:** If you email support or submit feedback forms, we process the content of those messages to respond.
 
-- **Reference Media:** We collect the images, videos, and audio files you upload as references for video generation (for example, first/last frames, motion references, style references, or audio sync inputs).
-- **Text Prompts:** We collect the text descriptions, tags, and generation settings you provide to create videos.
-- **Generated Videos:** We store the generated videos and related outputs (such as preview frames) and their derivatives needed to deliver the Services.
+### Information collected automatically
 
-**Crucially, {{appName}} does not use your uploaded reference media or the generated videos to train public AI models or share them with third parties without your explicit consent.**
-
-### Account and Contact Details
-
-- **Contact details:** We collect your contact information, such as your email address, and account details.
-- **Financial information:** We collect data necessary for payment, including for invoicing purposes, such as your billing details and credit card number (processed by a secure third-party payment provider).
-
-### Communications
-
-When communicating with {{appName}} (via email or chat), we collect and process written communications for improving Services, quality control, fraud detection, and legal purposes. Collected communications are kept for a limited time and automatically deleted unless a legitimate interest requires longer retention.
-
-## DATA WE COLLECT AUTOMATICALLY
-
-When using the Services, {{appName}} also collects information automatically, some of which may be Personal Data. This includes data such as:
+When you visit the Site, we may automatically collect limited technical data, such as:
 
 - IP address
-- User-agent (information about the browser type and version)
-- User subscription status
-- Usage statistics (e.g., number of generations, features used, time spent, generation modes used)
+- Browser type and version (user-agent)
+- Basic usage and page-view analytics (if analytics tools are enabled)
 
-{{appName}} may also collect data automatically through cookies. For information on how we use cookies, refer to the **COOKIES AND TRACKING** section.
+We may use cookies or similar technologies as described in our Cookie Policy.
 
-## DATA PROCESSING PURPOSES
+## How we use information
 
-We use the information you provide, some of which may be Personal Data, for the following purposes:
+We use the information above to:
 
-**A. Registration and Account Administration:** To register your account and allow you to administer and manage the Services offered.
+- Operate the waiting list and contact you about launch or early access
+- Respond to support or feedback requests
+- Maintain security, prevent abuse, and debug Site issues
+- Understand aggregate traffic patterns to improve the Site
+- Comply with legal obligations
 
-**B. Providing and Improving our Services:** We use your uploaded reference media, text prompts, and generated videos (internally) to deliver the AI video generation service, facilitate its performance, and continuously improve the speed and quality of the video generation engine and platform features.
+We do **not** use waitlist emails to train AI models. We do not currently process uploaded videos, generation prompts, payment card data, or subscription billing on this Site for a live generation product.
 
-**C. Analyze the use of Services:** We monitor usage history and volume to ensure compliance with our Terms of Service (ToS) and Service Level Agreement (SLA).
+## Legal bases (where applicable)
 
-**D. Customer Service:** To provide you with technical support and customer success services, such as responding to your requests and providing best practices for AI video generation.
+- **Consent / legitimate interest:** collecting waitlist emails to notify you about a product you asked to hear about
+- **Legitimate interest:** Site security, basic analytics, and communications related to your request
+- **Legal obligation:** when we must retain or disclose information under applicable law
 
-**E. Marketing/Communications:** To send our newsletter, marketing communications, and updates about new features or offers. We always include an unsubscribe link in direct marketing emails.
+## Sharing
 
-**F. Security, Fraud Detection, and Prevention:** We analyze usage patterns, IP addresses, and media inputs to prevent fraudulent, illegal, or infringing activities, including misuse of the AI video generation tools.
+We do not sell your Personal Data. We may share data with:
 
-**G. Analytics and Research:** We use the information to conduct research and analysis to assess business needs, improve our Services, and refine our marketing efforts. Results of such research may be shared in an anonymous, aggregated form.
+- **Infrastructure providers** (e.g., hosting, databases, email delivery, analytics) who process data on our behalf
+- **Authorities** when required by law or to protect rights and safety
 
-**H. Legal and Compliance:** To handle and resolve legal disputes, regulatory compliance, and comply with lawful requests from law enforcement where required by law.
+## Retention
 
-## LEGAL BASIS
+Waitlist emails are kept until you ask to be removed, we shut down the waitlist, or retention is no longer needed for the purposes above—whichever comes first. Technical logs are kept only as long as needed for security and operations.
 
-- **Performance of Contract (A, B, C, D):** Processing is necessary to perform our agreement with you (e.g., creating and managing your account, delivering the AI-generated videos).
-- **Legitimate Interest (E, F, G, H):** Processing is based on our legitimate commercial business interest to market our services, prevent fraud, and improve the quality of the AI video generation service.
-- **Legal Obligation (H):** Processing is necessary for compliance with a legal obligation (e.g., lawful law enforcement requests).
+To request deletion of your waitlist email, contact us at the support address listed on the Site.
 
-## DATA SHARING
+## Your choices
 
-We share your information, which may include Personal Data, with third parties only as permitted by law and as described below. **We do not sell or rent your Personal Data.**
+- Do not submit the waitlist form if you do not want us to store your email
+- Request access, correction, or deletion of your waitlist email by contacting support
+- Unsubscribe from marketing emails using links we include when we send them (launch updates may be transactional/product notices related to your waitlist request)
 
-- **Service Providers:** We share information with third-party service providers (e.g., cloud hosting, analytics, email marketing platforms, AI generation providers) to provide and maintain our Services.
-- **Payment Providers:** To process payments, relevant financial information is shared with secure third-party payment providers.
-- **Compelled Disclosure:** When legally required, strictly necessary for the performance of the Services, or to protect our rights, we disclose information to legal authorities.
-- **Sharing of Aggregate Data:** We may share anonymous, aggregated data (e.g., the total number of videos generated this month) with third parties for industry and demographic analysis.
+## International transfers
 
-## YOUR RIGHTS AND CHOICES (GDPR & CCPA)
+Our providers may process data in multiple regions. We take reasonable steps to protect Personal Data consistent with this policy.
 
-In accordance with the European General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA), you have the right to:
+## Children
 
-1. Request a copy of the Personal Data we hold about you.
-2. Be informed if your Personal Data is sold or disclosed.
-3. Request us to correct any inaccuracies in your Personal Data.
-4. Request us to erase, block, or restrict the processing of your Personal Data (subject to legal exceptions).
-5. Object to the processing of your Personal Data for direct marketing purposes.
+The Site is not directed at children under 16. We do not knowingly collect Personal Data from children.
 
-To exercise any of these rights, please contact us at **<{{supportEmail}}>**. We will process your application within 30 days.
+## Future product features
 
-## DATA SECURITY AND RETENTION
+If we later launch hosted AI video editing, accounts, or payments, we will update this Privacy Policy before those features become the primary offering and collect any additional data only as described then.
 
-{{appName}} attributes the very highest importance to data security. We implement industry-standard security measures and procedures to protect and safeguard information, including using encryption for payment information. Only authorized personnel are permitted to access Personal Data.
+## Changes
 
-We will retain your information for as long as deemed necessary to enable you to use our Services, comply with applicable laws, resolve disputes, and conduct our business (including fraud detection). We do not undertake to store all data indefinitely. Data may be deleted at any time during the active use of your account.
+We may update this policy from time to time. The “Effective Date” above will change when we do. Continued use of the Site after changes means you accept the updated policy.
 
-## COOKIES AND TRACKING
+## Contact
 
-{{appName}} uses cookies to improve and personalize its Sites and Services and measure its audience. You can choose to decline the acceptance of most cookies via your browser settings, but this may reduce your ability to use certain features.
-
-We use cookies for: facilitating communication, providing requested Services, recognizing users on return visits, and internal analysis (hit rates, browsing experience). We will require your authorization before implanting any non-essential cookies.
-
-## GOVERNING LAW AND CONTACT
-
-The terms of this Privacy Policy are governed by and in accordance with the laws of the state of California, United States.
-
-If you have any questions about this Privacy Policy or wish to exercise your rights, please contact us at:
-
-**Email:** **<{{supportEmail}}>**
+Questions about this policy or your waitlist data: use the contact email published on the Site (e.g. support@{{domain}} if configured).

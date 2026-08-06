@@ -401,6 +401,22 @@ export const feedback = sqliteTable(
   (table) => [index("feedback_userId_idx").on(table.userId)],
 );
 
+// Waitlist email signups (pre-product marketing)
+export const waitlistSignup = sqliteTable(
+  "waitlist_signup",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    email: text("email").notNull(),
+    createdAt: integer("createdAt", { mode: "timestamp" })
+      .notNull()
+      .$defaultFn(() => new Date()),
+  },
+  (table) => [
+    uniqueIndex("waitlist_signup_email_uidx").on(table.email),
+    index("waitlist_signup_createdAt_idx").on(table.createdAt),
+  ],
+);
+
 // Type
 export type SelectUser = typeof user.$inferSelect;
 export type InsertUser = typeof user.$inferInsert;
@@ -422,3 +438,5 @@ export type SelectUserTask = typeof userTask.$inferSelect;
 export type InsertUserTask = typeof userTask.$inferInsert;
 export type SelectFeedback = typeof feedback.$inferSelect;
 export type InsertFeedback = typeof feedback.$inferInsert;
+export type SelectWaitlistSignup = typeof waitlistSignup.$inferSelect;
+export type InsertWaitlistSignup = typeof waitlistSignup.$inferInsert;

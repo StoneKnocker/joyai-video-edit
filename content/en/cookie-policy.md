@@ -1,57 +1,51 @@
 ---
 title: "Cookie Policy"
 lang: "en"
-lastModified: "2026-05-27T00:00:00.000Z"
+lastModified: "2026-08-06T00:00:00.000Z"
 ---
 
 # Cookie Policy
 
-**Effective Date:** May 27, 2026
+**Effective Date:** August 6, 2026
 
-This Cookie Policy explains how {{appName}} uses cookies and similar technologies when you visit or use our services.
+This Cookie Policy explains how {{appName}} uses cookies and similar technologies on our website (the “Site”). The Site is presently a **waitlist and marketing** site; it does not operate a full paid AI generation product.
 
-## What cookies are
+## What are cookies?
 
-Cookies are small text files stored on your device when you visit a website. They help websites remember information about your visit, such as your preferences, session state, and how the site is used.
+Cookies are small text files stored on your device. Similar technologies include local storage and pixels used for analytics or preferences.
 
 ## How we use cookies
 
-We use cookies and similar technologies to support the normal operation of the site and to improve the user experience.
+We may use:
 
-These technologies may be used to:
+### Essential / functional
 
-- keep essential site functions working;
-- remember basic preferences such as language and workspace settings;
-- understand traffic and site usage;
-- support security and fraud prevention;
-- measure the performance of marketing or analytics tools.
+- Cookies or storage needed for security, load balancing, language preference, or basic Site operation
+- These are generally required for the Site to work as expected
 
-## Types of cookies we may use
+### Analytics (if enabled)
 
-### Essential cookies
+- Tools that help us understand aggregate traffic (e.g., pages visited, approximate location derived from IP, device type)
+- Used to improve the waitlist landing experience—not to process generation jobs or payment data
 
-These cookies are required for the website to function properly. They may help with session management, security, and basic product features like video generation workflows.
+### Marketing (if enabled)
 
-### Preference cookies
+- Limited tags to measure campaign effectiveness for the waitlist announcement
 
-These cookies remember choices such as language, interface preferences, or your last used generation mode.
+We do **not** use cookies on this Site to train AI models on your content or to store video generation history, because those product features are not the current offering.
 
-### Analytics and performance cookies
+## Your choices
 
-These cookies help us understand how visitors use the site so we can improve performance, usability, and content related to AI video generation features.
+You can control cookies through your browser settings (block, delete, or alert). Blocking essential cookies may affect Site functionality. Where a consent banner or preference center is provided, you can adjust non-essential cookies there.
 
-## Third-party services
+## Third parties
 
-Some cookies or similar technologies may be set by third-party services that help us operate the site, process analytics, or support marketing and advertising features.
+Analytics or infrastructure providers may set their own cookies subject to their policies. Review those providers’ documentation for details.
 
-## Managing cookies
+## Updates
 
-Most browsers let you control cookies through their settings. You can usually block or delete cookies there. Please note that disabling some cookies may affect how the site works.
-
-## Changes to this policy
-
-We may update this Cookie Policy from time to time. When we do, we will post the updated version on this page.
+We may update this Cookie Policy when our practices change. The effective date above will be revised accordingly.
 
 ## Contact
 
-If you have questions about this Cookie Policy, contact us at **<{{supportEmail}}>**.
+Questions about cookies: use the support contact published on the Site.
