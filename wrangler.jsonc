@@ -8,12 +8,11 @@
   "assets": {
     "directory": "./build/client/"
   },
-  // Recover stuck video tasks when callback/poll miss (see taskRecoveryService)
-  "triggers": {
-    "crons": ["*/2 * * * *"]
-  },
-  // Required secrets — wrangler types generates typings from these names,
-  // wrangler deploy validates they are set on the Worker before uploading.
+  // Cron disabled for waitlist-only deploy: Workers Free plan allows 5 crons/account (limit hit).
+  // Re-enable for video task recovery when on Workers Paid, e.g.:
+  // "triggers": { "crons": ["*/2 * * * *"] },
+  // Secrets — optional for waitlist-only deploy (no payment/upload/auth providers required).
+  // Add names here when those features are re-enabled; wrangler deploy validates required secrets.
   "env": {
     "dev": {
       "vars": {
@@ -60,16 +59,7 @@
         }
       ],
       "secrets": {
-        "required": [
-          "R2_SECRET_ACCESS_KEY",
-          "BETTER_AUTH_SECRET",
-          "GOOGLE_CLIENT_SECRET",
-          "UNOSEND_API_KEY",
-          "SUBOTIZ_API_KEY",
-          "KIE_API_KEY",
-          "KIE_WEBHOOK_HMAC_KEY",
-          "WAVESPEED_API_KEY"
-        ]
+        "required": []
       }
     },
     "prod": {
@@ -119,16 +109,7 @@
         }
       ],
       "secrets": {
-        "required": [
-          "R2_SECRET_ACCESS_KEY",
-          "BETTER_AUTH_SECRET",
-          "GOOGLE_CLIENT_SECRET",
-          "UNOSEND_API_KEY",
-          "SUBOTIZ_API_KEY",
-          "KIE_API_KEY",
-          "KIE_WEBHOOK_HMAC_KEY",
-          "WAVESPEED_API_KEY"
-        ]
+        "required": []
       }
     }
   },

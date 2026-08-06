@@ -338,6 +338,10 @@ export async function handleKieCallback({
   timestamp,
   signature,
 }: HandleKieCallbackParams): Promise<HandleKieCallbackResult> {
+  if (!serverEnv.KIE_WEBHOOK_HMAC_KEY) {
+    return { status: 503, message: "KIE webhook not configured" };
+  }
+
   const isAuthorized = await verifyKieWebhookSignature({
     payload: body,
     timestamp,

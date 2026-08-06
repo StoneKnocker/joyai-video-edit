@@ -3,12 +3,15 @@ import { getMimeType } from "@/lib/mime";
 import { serverEnv } from "~/lib/env.server";
 import { buildR2Url } from "./r2.shared";
 
-const R2_BUCKET_NAME = serverEnv.R2_BUCKET_NAME;
-const R2_ACCOUNT_ID = serverEnv.R2_ACCOUNT_ID;
-
 let r2Client: AwsClient | null = null;
 
-function requireEnv(name: "R2_ACCESS_KEY_ID" | "R2_SECRET_ACCESS_KEY") {
+function requireEnv(
+  name:
+    | "R2_ACCESS_KEY_ID"
+    | "R2_SECRET_ACCESS_KEY"
+    | "R2_ACCOUNT_ID"
+    | "R2_BUCKET_NAME",
+) {
   const value = serverEnv[name];
 
   if (!value) {
@@ -27,8 +30,10 @@ function getR2ObjectEndpoint(filePath: string): string {
     .split("/")
     .map(encodeURIComponent)
     .join("/");
+  const accountId = requireEnv("R2_ACCOUNT_ID");
+  const bucketName = requireEnv("R2_BUCKET_NAME");
 
-  return `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com/${R2_BUCKET_NAME}/${key}`;
+  return `https://${accountId}.r2.cloudflarestorage.com/${bucketName}/${key}`;
 }
 
 export function getServerR2Url(pathOrUrl: string): string {

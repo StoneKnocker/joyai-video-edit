@@ -4,7 +4,10 @@ import { z } from "zod";
 import type { PublicEnv } from "./public-env";
 
 /**
- * Server environment schema definition with validation rules
+ * Server environment schema.
+ * Waitlist-only deploys only need APP_* / R2_DOMAIN (+ Cloudflare bindings).
+ * Payment, auth provider, AI, and S3-style R2 secrets are optional until those
+ * features are re-enabled.
  */
 const serverEnvSchema = z.object({
   ENVIRONMENT: z.enum(["development", "production"]).default("development"),
@@ -13,17 +16,20 @@ const serverEnvSchema = z.object({
   APP_URL: z.string().min(1),
   R2_DOMAIN: z.string().min(1),
 
-  R2_BUCKET_NAME: z.string().min(1),
-  R2_ACCOUNT_ID: z.string().min(1),
-  R2_ACCESS_KEY_ID: z.string().min(1),
-  R2_SECRET_ACCESS_KEY: z.string().min(1),
-  SEND_FROM_EMAIL: z.string().min(1),
+  // R2 public config (optional until S3 API upload is used)
+  R2_BUCKET_NAME: z.string().optional(),
+  R2_ACCOUNT_ID: z.string().optional(),
+  R2_ACCESS_KEY_ID: z.string().optional(),
+  R2_SECRET_ACCESS_KEY: z.string().optional(),
+  SEND_FROM_EMAIL: z.string().optional().default("support@localhost"),
 
-  GOOGLE_CLIENT_ID: z.string().min(1),
-  GOOGLE_CLIENT_SECRET: z.string().min(1),
-  // better-auth session signing / encryption — must be ≥32 chars
-  BETTER_AUTH_SECRET: z.string().min(32),
-  UNOSEND_API_KEY: z.string().min(1),
+  // Auth (optional for waitlist-only)
+  GOOGLE_CLIENT_ID: z.string().optional(),
+  GOOGLE_CLIENT_SECRET: z.string().optional(),
+  // better-auth session signing / encryption — must be ≥32 chars when set
+  BETTER_AUTH_SECRET: z.string().min(32).optional(),
+  UNOSEND_API_KEY: z.string().optional(),
+
   CREEM_API_KEY: z.string().optional(),
   CREEM_WEBHOOK_SECRET: z.string().optional(),
   /** Primary payment provider: subotiz | creem */
@@ -36,12 +42,14 @@ const serverEnvSchema = z.object({
   SUBOTIZ_ENABLED: z.string().optional().default("true"),
   /** Explicitly re-enable Creem as a selectable provider */
   CREEM_ENABLED: z.string().optional().default("false"),
-  KIE_API_KEY: z.string().min(1),
-  KIE_WEBHOOK_HMAC_KEY: z.string().min(1),
+
+  // AI providers (optional until generation is re-enabled)
+  KIE_API_KEY: z.string().optional(),
+  KIE_WEBHOOK_HMAC_KEY: z.string().optional(),
   /** Optional public base for KIE webhooks (e.g. ngrok in local dev). Falls back to APP_URL. */
   KIE_CALLBACK_BASE_URL: z.string().url().optional(),
   /** WaveSpeed content moderator API key (text/image moderation before video generation). */
-  WAVESPEED_API_KEY: z.string().min(1),
+  WAVESPEED_API_KEY: z.string().optional(),
 
   // PayPal (optional — enable with PAYPAL_ENABLED=true + credentials)
   PAYPAL_ENABLED: z.string().optional().default("false"),

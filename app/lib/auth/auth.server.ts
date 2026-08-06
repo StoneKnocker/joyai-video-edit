@@ -9,9 +9,23 @@ import { ensureReviewTestAccountCredits } from "~/lib/service/userService";
 import { createUserSourceForNewUser } from "~/lib/service/userSourceService";
 import { emailOTPConfig } from "./unosendEmailOTP";
 
+/** Placeholder so the Worker can boot waitlist-only without auth secrets. */
+const AUTH_SECRET_FALLBACK =
+  "waitlist-only-insecure-placeholder-do-not-use-for-auth";
+
+const googleAuth =
+  serverEnv.GOOGLE_CLIENT_ID && serverEnv.GOOGLE_CLIENT_SECRET
+    ? {
+        google: {
+          clientId: serverEnv.GOOGLE_CLIENT_ID,
+          clientSecret: serverEnv.GOOGLE_CLIENT_SECRET,
+        },
+      }
+    : {};
+
 export const serverAuth = betterAuth({
   // Explicit secret from validated env — do not rely on process.env alone on Workers
-  secret: serverEnv.BETTER_AUTH_SECRET,
+  secret: serverEnv.BETTER_AUTH_SECRET ?? AUTH_SECRET_FALLBACK,
   baseURL: serverEnv.APP_URL,
   trustedOrigins: [serverEnv.APP_URL],
   database: drizzleAdapter(db, {
@@ -60,12 +74,7 @@ export const serverAuth = betterAuth({
     },
     delete: async (key) => await serverEnv.APP_KV.delete(`_auth:${key}`),
   },
-  socialProviders: {
-    google: {
-      clientId: serverEnv.GOOGLE_CLIENT_ID,
-      clientSecret: serverEnv.GOOGLE_CLIENT_SECRET,
-    },
-  },
+  socialProviders: googleAuth,
   account: {
     accountLinking: {
       enabled: true,

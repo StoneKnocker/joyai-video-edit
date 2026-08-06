@@ -36,6 +36,10 @@ export const emailOTPConfig = emailOTP({
           ? "Verify Your Email"
           : "Your OTP Code";
 
+    if (!serverEnv.UNOSEND_API_KEY) {
+      throw new Error("UNOSEND_API_KEY is required to send email OTP");
+    }
+
     const unosend = new Unosend(serverEnv.UNOSEND_API_KEY);
 
     try {

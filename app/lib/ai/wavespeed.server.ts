@@ -7,6 +7,9 @@ import {
 const WAVESPEED_BASE_URL = "https://api.wavespeed.ai/api/v3";
 
 function authHeaders() {
+  if (!serverEnv.WAVESPEED_API_KEY) {
+    throw new Error("WAVESPEED_API_KEY is required for moderation");
+  }
   return {
     "Content-Type": "application/json",
     Authorization: `Bearer ${serverEnv.WAVESPEED_API_KEY}`,

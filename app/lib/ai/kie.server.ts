@@ -24,6 +24,9 @@ interface KieApiResponse {
 }
 
 function getHeaders() {
+  if (!serverEnv.KIE_API_KEY) {
+    throw new Error("KIE_API_KEY is required for KIE API requests");
+  }
   return {
     "Content-Type": "application/json",
     Authorization: `Bearer ${serverEnv.KIE_API_KEY}`,
