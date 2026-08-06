@@ -69,7 +69,7 @@
     "@content-collections/core": "^0.12.0",
     "@content-collections/remix-vite": "^0.3.0",
     "@react-router/dev": "^8.1.0",
-    "@tailwindcss/vite": "^4.3.2",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
