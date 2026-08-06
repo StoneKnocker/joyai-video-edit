@@ -64,7 +64,7 @@
     "@cloudflare/vite-plugin": "^1.43.0",
     "@cloudflare/workers-types": "^4.20260702.1",
     "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/config-conventional": "^21.2.0",
     "@content-collections/cli": "^0.1.8",
     "@content-collections/core": "^0.12.0",
     "@content-collections/remix-vite": "^0.3.0",
